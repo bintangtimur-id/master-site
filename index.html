@@ -1,14 +1,51 @@
 <html>
-
 <head>
- <link rel="icon" type="image/png" href="favicon.png" />
- <title>BintangTimur.ID</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>BintangTimur.ID</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .description {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            color: #666;
+        }
+        /* Study Chat Widget */
+        .chat-widget{position:fixed;bottom:20px;right:20px;z-index:9999}
+        .chat-widget button{width:56px;height:56px;border:none;border-radius:50%;background:#2563eb;color:#fff;font-size:1.5rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25);transition:transform .15s,background .15s}
+        .chat-widget button:hover{transform:scale(1.05);background:#1d4ed8}
+        .chat-widget iframe{display:none;position:absolute;bottom:64px;right:0;width:380px;height:520px;border:none;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.2);background:#fff}
+        @media(max-width:600px){.chat-widget iframe{width:calc(100vw - 40px);right:-12px}}
+    </style>
 </head>
-
 <body>
- <center>
-  <img width="400px" height="400px" src="logo.png" />
- </center>
+    <div class="logo">
+        <img width="250px" height="250px" src="logo.png" alt="BintangTimur.ID Logo">
+    </div>
+    <h1>BintangTimur.ID</h1>
+    <div class="tagline">Portal Pembelajaran Eksegesis dan Hermeneutika</div>
+    <div class="description">
+        Selamat datang di BintangTimur.ID, pusat pembelajaran online yang berfokus pada kajian eksegesis dan hermeneutika. 
+        Kami menyediakan berbagai sumber daya, artikel, dan kursus untuk mendalami interpretasi teks suci secara akademis dan espiritual.
+    </div>
+    <!-- Study Chat Widget -->
+    <div class="chat-widget">
+        <button id="bt-toggle" onclick="document.getElementById('bt-iframe').style.display=document.getElementById('bt-iframe').style.display==='none'?'block':'none'" aria-label="Study Chat">✝</button>
+        <iframe id="bt-iframe" src="https://chat.bintangtimur.id/widget" title="Study Chat"></iframe>
+    </div>
 </body>
-
 </html>
